@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Birthday Saviya 🎂</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600;1,700&family=Hind+Siliguri:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--night:#1d0f24;--cream:#f6d9c4;--rose:#ff7a8a;--gold:#ffc857;--orchid:#7b4b94}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%}
+body{background:radial-gradient(120% 90% at 50% 100%,#3b1f4a,var(--night) 65%);color:var(--cream);font-family:"Hind Siliguri",system-ui,sans-serif;overflow-x:hidden;text-align:center}
+main{min-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 20px;position:relative;z-index:2}
+h1{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-weight:700;font-size:clamp(2.6rem,11vw,5.5rem);line-height:1.05;color:var(--cream)}
+h1 span{display:block;color:var(--rose)}
+.date{margin-top:10px;opacity:.8;letter-spacing:.04em}
+/* cake */
+.cake{margin:28px 0 8px;cursor:pointer;background:none;border:0;-webkit-tap-highlight-color:transparent}
+.cake:focus-visible{outline:2px solid var(--gold);outline-offset:8px;border-radius:12px}
+.flame{transform-origin:50% 100%;animation:flicker .18s infinite alternate;transition:opacity .3s,transform .3s}
+.out .flame{opacity:0;transform:scale(.2)}
+.smoke{opacity:0}
+.out .smoke{animation:smoke 1.6s ease-out forwards}
+@keyframes flicker{from{transform:scale(1,1) rotate(-2deg)}to{transform:scale(.92,1.1) rotate(2deg)}}
+@keyframes smoke{0%{opacity:.7;transform:translateY(0)}100%{opacity:0;transform:translateY(-26px)}}
+.hint{font-size:.95rem;opacity:.75;min-height:1.5em;transition:opacity .4s}
+.out .hint{opacity:0}
+/* message */
+.card{max-width:34rem;margin-top:22px;padding:22px 24px;border:1px solid rgba(246,217,196,.25);border-radius:18px;background:rgba(255,255,255,.05);backdrop-filter:blur(4px);line-height:1.8;font-size:1.08rem;min-height:9rem;opacity:0;transform:translateY(12px);transition:opacity .6s,transform .6s}
+.out .card{opacity:1;transform:none}
+.sign{display:block;margin-top:10px;color:var(--gold)}
+/* background layers */
+canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:3}
+.heart{position:fixed;bottom:-40px;z-index:1;color:var(--rose);opacity:.5;animation:rise linear forwards;pointer-events:none}
+@keyframes rise{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+/* intro gift */
+#intro{position:fixed;inset:0;z-index:10;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:radial-gradient(100% 80% at 50% 40%,#3b1f4a,#12081a);transition:opacity 1s,transform 1s}
+#intro.gone{opacity:0;transform:scale(1.15);pointer-events:none}
+#intro p{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:clamp(1.4rem,6vw,2rem)}
+#intro small{opacity:.7}
+.gift{background:none;border:0;cursor:pointer;position:relative;-webkit-tap-highlight-color:transparent}
+.gift:focus-visible{outline:2px solid var(--gold);outline-offset:8px;border-radius:12px}
+.gift svg{overflow:visible;animation:bob 1.6s ease-in-out infinite}
+.lid{transition:transform .9s cubic-bezier(.3,1.6,.5,1),opacity .9s .3s}
+.glow{opacity:0;transform-origin:110px 120px;transform:scale(.2);transition:opacity .6s,transform 1.4s}
+.opened-gift svg{animation:none}
+.opened-gift .lid{transform:translateY(-120px) rotate(-18deg);opacity:0}
+.opened-gift .glow{opacity:1;transform:scale(5)}
+@keyframes bob{50%{transform:translateY(-8px) rotate(-1.5deg)}}
+body:not(.opened) main{opacity:0}
+main{transition:opacity 1.2s .4s}
+@media (prefers-reduced-motion:reduce){.gift svg{animation:none}}
+@media (prefers-reduced-motion:reduce){.flame,.heart{animation:none}.heart{display:none}}
+</style>
+</head>
+<body>
+<div id="intro">
+  <p>সাভিয়া, তোমার জন্য একটা সারপ্রাইজ আছে…</p>
+  <button class="gift" id="gift" aria-label="সারপ্রাইজ খোলো">
+    <svg width="220" height="220" viewBox="0 0 220 220" aria-hidden="true">
+      <circle class="glow" cx="110" cy="120" r="40" fill="#ffc857" opacity=".6"/>
+      <rect x="35" y="95" width="150" height="110" rx="8" fill="#7b4b94"/>
+      <rect x="99" y="95" width="22" height="110" fill="#ff7a8a"/>
+      <g class="lid">
+        <rect x="25" y="68" width="170" height="36" rx="8" fill="#9a62b5"/>
+        <rect x="99" y="68" width="22" height="36" fill="#ff7a8a"/>
+        <path d="M110 68c-30-34-62-8-36 4 12 5 26 2 36-4zM110 68c30-34 62-8 36 4-12 5-26 2-36-4z" fill="none" stroke="#ff7a8a" stroke-width="7" stroke-linejoin="round"/>
+      </g>
+    </svg>
+  </button>
+  <small>ট্যাপ করে খোলো 🎁</small>
+</div>
+<main id="app">
+  <h1>Happy Birthday,<span>Saviya Akhter Choa</span></h1>
+  <p class="date">১১ নভেম্বর ২০২৬</p>
+
+  <button class="cake" id="cake" aria-label="মোমবাতিতে ফুঁ দাও">
+    <svg width="220" height="230" viewBox="0 0 220 230" aria-hidden="true">
+      <g class="smoke"><path d="M110 70c-8-10 8-16 0-28" stroke="#f6d9c4" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+      <g class="flame"><path d="M110 28c14 16 16 26 0 40-16-14-14-24 0-40z" fill="#ffc857"/><path d="M110 42c7 9 8 15 0 22-8-7-7-13 0-22z" fill="#ff7a8a"/></g>
+      <rect x="105" y="66" width="10" height="34" rx="3" fill="#f6d9c4"/>
+      <rect x="40" y="100" width="140" height="50" rx="10" fill="#ff7a8a"/>
+      <path d="M40 118q17 16 35 0t35 0 35 0 35 0v-8H40z" fill="#f6d9c4"/>
+      <rect x="20" y="150" width="180" height="62" rx="12" fill="#7b4b94"/>
+      <path d="M20 170q22 16 45 0t45 0 45 0 45 0v-8H20z" fill="#f6d9c4"/>
+      <ellipse cx="110" cy="214" rx="104" ry="8" fill="#000" opacity=".25"/>
+    </svg>
+  </button>
+  <p class="hint" id="hint">মোমবাতিতে একটা ফুঁ দাও — ট্যাপ করো 🕯️</p>
+
+  <section class="card" aria-live="polite">
+    <span id="msg"></span>
+    <span class="sign" id="sign"></span>
+  </section>
+</main>
+<canvas id="fx"></canvas>
+
+<script>
+// ====== Ekhane nijer kotha likho ======
+const MESSAGE = "শুভ জন্মদিন, সাভিয়া! আজকের দিনটা তোমার, আর আমার সবচেয়ে প্রিয় দিনগুলোর একটা। তুমি পাশে আছো বলেই সবকিছু সুন্দর লাগে। সবসময় হাসিখুশি থেকো, আর তোমার সব স্বপ্ন সত্যি হোক।";
+const SIGN = "— তোমার আবিদ ❤️";
+// ======================================
+
+const app = document.getElementById('app'), cake = document.getElementById('cake');
+const msg = document.getElementById('msg'), sign = document.getElementById('sign');
+const cvs = document.getElementById('fx'), ctx = cvs.getContext('2d');
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let W, H, parts = [];
+function size(){ W = cvs.width = innerWidth; H = cvs.height = innerHeight; }
+addEventListener('resize', size); size();
+
+// floating hearts
+function heart(){
+  if (reduce || !document.body.classList.contains('opened')) return;
+  const h = document.createElement('div');
+  h.className = 'heart'; h.textContent = '♥';
+  h.style.left = Math.random()*100 + 'vw';
+  h.style.fontSize = (12 + Math.random()*22) + 'px';
+  h.style.animationDuration = (7 + Math.random()*7) + 's';
+  document.body.appendChild(h);
+  setTimeout(() => h.remove(), 15000);
+}
+setInterval(heart, 900);
+
+// confetti
+const colors = ['#ff7a8a','#ffc857','#f6d9c4','#b57fd0','#ffffff'];
+function burst(){
+  if (reduce) return;
+  for (let i = 0; i < 160; i++){
+    const a = Math.random()*Math.PI*2, v = 4 + Math.random()*9;
+    parts.push({x:W/2, y:H*0.42, vx:Math.cos(a)*v, vy:Math.sin(a)*v - 5, r:3+Math.random()*4,
+      c:colors[i % colors.length], rot:Math.random()*6, life:140 + Math.random()*60});
+  }
+}
+function tick(){
+  ctx.clearRect(0,0,W,H);
+  parts = parts.filter(p => p.life-- > 0);
+  for (const p of parts){
+    p.vy += .25; p.vx *= .99; p.x += p.vx; p.y += p.vy; p.rot += .1;
+    ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(p.rot);
+    ctx.fillStyle = p.c; ctx.globalAlpha = Math.min(1, p.life/40);
+    ctx.fillRect(-p.r, -p.r/2, p.r*2, p.r); ctx.restore();
+  }
+  requestAnimationFrame(tick);
+}
+tick();
+
+// typewriter
+function type(el, text, speed, done){
+  let i = 0;
+  (function step(){
+    el.textContent = text.slice(0, ++i);
+    if (i < text.length) setTimeout(step, speed); else done && done();
+  })();
+}
+
+let blown = false;
+cake.addEventListener('click', () => {
+  if (blown) { burst(); return; }
+  blown = true;
+  app.classList.add('out');
+  burst(); setTimeout(burst, 500);
+  setTimeout(() => type(msg, MESSAGE, reduce ? 0 : 45, () => { sign.textContent = SIGN; burst(); }), 700);
+});
+
+// opening animation
+const gift = document.getElementById('gift'), intro = document.getElementById('intro');
+let opened = false;
+gift.addEventListener('click', () => {
+  if (opened) return; opened = true;
+  gift.classList.add('opened-gift');
+  burst();
+  setTimeout(() => { document.body.classList.add('opened'); intro.classList.add('gone'); burst(); }, reduce ? 0 : 1500);
+});
+</script>
+</body>
+</html>
